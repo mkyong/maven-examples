@@ -25,16 +25,26 @@ https://books.sonatype.com/mvnex-book/reference/customizing-sect-custom-packaged
 https://books.sonatype.com/mvnex-book/reference/index.html
 
 
-
-
 mvn archetype:generate -DgroupId=com.mkyong -DartifactId=hashing -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 	
-
 
 #Extra 
 Java Velocity example
 
-
 # Update this
-https://www.mkyong.com/java/java-sha-hashing-example/
 http://www.mkyong.com/maven/how-to-create-a-java-project-with-maven/
+
+# Done.
+https://www.mkyong.com/java/java-sha-hashing-example/
+https://www.mkyong.com/java/java-md5-hashing-example/
+https://www.mkyong.com/java/how-to-generate-a-file-checksum-value-in-java/
+
+
+# question 
+--------------
+maven-jar-plugin
+Apache Maven Assembly Plugin
+Apache Maven Shade Plugin
+Maven Dependency Plugin
+
+https://stackoverflow.com/questions/38548271/difference-between-maven-plugins-assembly-plugins-jar-plugins-shaded-plugi
