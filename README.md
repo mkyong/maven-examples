@@ -5,9 +5,16 @@ List of Maven examples
 - How to install Maven on Mac OSX
 - How to install Maven on Ubuntu, Manjora?
 
-- Create a Java project with Maven
-- Create a Java web project with Maven - Simple Servlet
+## Maven - Create a Java project
+http://www.mkyong.com/maven/how-to-create-a-java-project-with-maven/
+
+## Maven - Create a Java web application - Simple Servlet
+http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
+
 - Create a Java web project with Maven - Spring
+
+
+Java web application
 
 - Multiple modules
 - Multiple profiles
@@ -28,16 +35,13 @@ https://books.sonatype.com/mvnex-book/reference/index.html
 mvn archetype:generate -DgroupId=com.mkyong -DartifactId=hashing -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 	
 
+mvn archetype:generate -DgroupId=com.mkyong.web -DartifactId=web-project-spring -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.3 -DinteractiveMode=false
+
 #Extra 
 Java Velocity example
 
 # Update this
-http://www.mkyong.com/maven/how-to-create-a-java-project-with-maven/
-
-# Done.
-https://www.mkyong.com/java/java-sha-hashing-example/
-https://www.mkyong.com/java/java-md5-hashing-example/
-https://www.mkyong.com/java/how-to-generate-a-file-checksum-value-in-java/
+http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
 
 
 # question 
@@ -46,5 +50,3 @@ maven-jar-plugin
 Apache Maven Assembly Plugin
 Apache Maven Shade Plugin
 Maven Dependency Plugin
-
-https://stackoverflow.com/questions/38548271/difference-between-maven-plugins-assembly-plugins-jar-plugins-shaded-plugi
