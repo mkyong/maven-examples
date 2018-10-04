@@ -8,10 +8,8 @@ List of Maven examples
 ## Maven - Create a Java project
 http://www.mkyong.com/maven/how-to-create-a-java-project-with-maven/
 
-## Maven - Create a Java web application - Simple Servlet
+## Maven - Create a Java web application project - Spring MVC
 http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
-
-- Create a Java web project with Maven - Spring
 
 
 Java web application
