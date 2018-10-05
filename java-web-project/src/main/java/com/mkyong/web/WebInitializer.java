@@ -1,6 +1,6 @@
 package com.mkyong.web;
 
-import com.mkyong.web.config.SpringConfiguration;
+import com.mkyong.web.config.SpringConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
@@ -12,7 +12,7 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[]{SpringConfiguration.class};
+        return new Class[]{SpringConfig.class};
     }
 
     @Override
