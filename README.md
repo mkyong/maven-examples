@@ -5,14 +5,15 @@ List of Maven examples
 - How to install Maven on Mac OSX
 - How to install Maven on Ubuntu, Manjora?
 
-## Maven - How to create a Java project
+## Maven - A Java project
 http://www.mkyong.com/maven/how-to-create-a-java-project-with-maven/
 
-## Maven - How to create a Java web application project
+## Maven - A Java web application project
 http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
 
+## Maven - A Multi-module project
 
-Java web application
+
 
 - Multiple modules
 - Multiple profiles
