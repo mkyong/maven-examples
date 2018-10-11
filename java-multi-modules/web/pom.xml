@@ -19,11 +19,12 @@
 
     <properties>
         <spring.version>5.1.0.RELEASE</spring.version>
+        <thymeleaf.version>3.0.10.RELEASE</thymeleaf.version>
     </properties>
 
     <dependencies>
 
-        <!-- Link to our own hashing module -->
+        <!-- Link to our own hashing module , v1.1-->
         <dependency>
             <groupId>com.mkyong</groupId>
             <artifactId>hashing</artifactId>
@@ -49,7 +50,7 @@
             <version>1.2.3</version>
         </dependency>
 
-        <!-- I like this assertion -->
+        <!-- need this for unit test -->
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-library</artifactId>
@@ -57,7 +58,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- for web servlet -->
+        <!-- servlet api -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -65,14 +66,18 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Tomcat need this, Jetty no  -->
-        <!-- if Tomcat, uncomment this
+        <!-- thymeleaf view -->
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf</artifactId>
+            <version>${thymeleaf.version}</version>
         </dependency>
-         -->
+
+        <dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf-spring5</artifactId>
+            <version>${thymeleaf.version}</version>
+        </dependency>
 
     </dependencies>
 

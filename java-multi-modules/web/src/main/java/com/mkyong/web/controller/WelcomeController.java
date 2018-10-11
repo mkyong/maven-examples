@@ -7,8 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import java.util.Date;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class WelcomeController {
@@ -18,21 +17,17 @@ public class WelcomeController {
     private DigestService digest = new CommonsCodecService();
 
     @GetMapping("/")
-    public String index(Model model) {
-        logger.debug("Welcome to mkyong.com...");
+    public String welcome(@RequestParam(name = "query",
+            required = false, defaultValue = "123456") String query, Model model) {
 
-        String msg = getMessage();
+        logger.debug("Welcome to mkyong.com... Query : {}", query);
 
-        model.addAttribute("msg", msg);
-        model.addAttribute("sha256", digest.sha256hex(msg));
-        model.addAttribute("today", new Date());
-        
+        model.addAttribute("query", query);
+        model.addAttribute("sha256", digest.sha256hex(query));
+        model.addAttribute("sha512", digest.sha512hex(query));
+        model.addAttribute("md5", digest.md5hex(query));
+
         return "index";
-
-    }
-
-    public String getMessage() {
-        return "Hello World";
     }
 
 }
