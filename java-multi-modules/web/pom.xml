@@ -18,17 +18,24 @@
     <packaging>war</packaging>
 
     <properties>
-        <spring.version>5.1.0.RELEASE</spring.version>
         <thymeleaf.version>3.0.10.RELEASE</thymeleaf.version>
     </properties>
 
     <dependencies>
 
-        <!-- Link to our own hashing module , v1.1-->
+        <!-- md5 hash
         <dependency>
-            <groupId>com.mkyong</groupId>
-            <artifactId>hashing</artifactId>
-            <version>1.1</version>
+            <groupId>com.mkyong.password</groupId>
+            <artifactId>password-md5</artifactId>
+            <version>1.0</version>
+        </dependency>
+        -->
+
+        <!-- sha -->
+        <dependency>
+            <groupId>com.mkyong.password</groupId>
+            <artifactId>password-sha</artifactId>
+            <version>1.0</version>
         </dependency>
 
         <dependency>

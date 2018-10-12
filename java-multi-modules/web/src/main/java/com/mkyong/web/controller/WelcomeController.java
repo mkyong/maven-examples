@@ -1,9 +1,10 @@
 package com.mkyong.web.controller;
 
-import com.mkyong.hashing.CommonsCodecService;
-import com.mkyong.hashing.DigestService;
+import com.mkyong.password.PasswordService;
+import com.mkyong.password.PasswordServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,8 @@ public class WelcomeController {
 
     private final Logger logger = LoggerFactory.getLogger(WelcomeController.class);
 
-    private DigestService digest = new CommonsCodecService();
+    @Autowired
+    private PasswordService passwordService;
 
     @GetMapping("/")
     public String welcome(@RequestParam(name = "query",
@@ -23,9 +25,8 @@ public class WelcomeController {
         logger.debug("Welcome to mkyong.com... Query : {}", query);
 
         model.addAttribute("query", query);
-        model.addAttribute("sha256", digest.sha256hex(query));
-        model.addAttribute("sha512", digest.sha512hex(query));
-        model.addAttribute("md5", digest.md5hex(query));
+        model.addAttribute("hash", passwordService.hash(query));
+        model.addAttribute("algorithm", passwordService.algorithm());
 
         return "index";
     }

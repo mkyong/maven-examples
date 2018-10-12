@@ -23,3 +23,10 @@ http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
 - https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
 - https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html
 - https://books.sonatype.com/mvnex-book/reference/index.html
+
+
+update this 
+https://www.mkyong.com/maven/where-is-maven-local-repository/
+
+mvn help:evaluate -Dexpression=settings.localRepository
+mvn help:effective-settings
