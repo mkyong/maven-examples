@@ -14,7 +14,6 @@ http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
 ## Maven - A Multi-module project
 
 
-
 - Multiple modules
 - Multiple profiles
 

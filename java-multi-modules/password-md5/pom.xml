@@ -9,6 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- password-md5 info -->
     <groupId>com.mkyong.password</groupId>
     <artifactId>password-md5</artifactId>
     <version>1.0</version>

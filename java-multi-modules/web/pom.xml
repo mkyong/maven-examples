@@ -23,20 +23,20 @@
 
     <dependencies>
 
-        <!-- md5 hash
+        <!-- md5 hash -->
         <dependency>
             <groupId>com.mkyong.password</groupId>
             <artifactId>password-md5</artifactId>
             <version>1.0</version>
         </dependency>
-        -->
 
-        <!-- sha -->
+        <!-- sha
         <dependency>
             <groupId>com.mkyong.password</groupId>
             <artifactId>password-sha</artifactId>
             <version>1.0</version>
         </dependency>
+        -->
 
         <dependency>
             <groupId>org.springframework</groupId>
