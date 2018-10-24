@@ -1,7 +1,7 @@
 # Maven – How to create a multi module project
 Maven, Spring MVC, thymeleaf, a simple MVC web app to hash a string with either MD5 or the SHA-256 algorithm.
 
-Project Link - http://www.mkyong.com/maven/maven-how-to-create-a-multi-module-project/
+Project Link - https://www.mkyong.com/maven/maven-how-to-create-a-multi-module-project/
 
 
 ## How to run this project?

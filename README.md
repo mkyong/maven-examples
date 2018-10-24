@@ -18,7 +18,14 @@ Upcoming...
 - Multiple profiles
 
 
+## 4. Maven FAQs
+- http://www.mkyong.com/maven/where-is-maven-local-repository/
+
+
 # References
 - https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
 - https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html
 - https://books.sonatype.com/mvnex-book/reference/index.html
+
+# Update this 
+http://www.mkyong.com/maven/how-to-run-unit-test-with-maven/
