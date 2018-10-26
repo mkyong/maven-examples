@@ -3,9 +3,6 @@ https://github.com/mkyong/maven-examples
 # maven-examples
 List of Maven examples
 
-- How to install Maven on Windows
-- How to install Maven on Mac OSX
-- How to install Maven on Ubuntu, Manjora?
 
 ## 1. Maven - A Java project
 http://www.mkyong.com/maven/how-to-create-a-java-project-with-maven/
@@ -16,9 +13,13 @@ http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
 ## 3. Maven - A Multi-module project
 http://www.mkyong.com/maven/maven-how-to-create-a-multi-module-project/
 
-Upcoming...
-- Multiple profiles
+## 4. Maven Profiles
+http://www.mkyong.com/maven/maven-profiles-example/
 
+Upcoming...
+- How to install Maven on Windows
+- How to install Maven on Mac OSX
+- How to install Maven on Ubuntu, Manjora?
 
 ## 4. Maven FAQs
 - http://www.mkyong.com/maven/where-is-maven-local-repository/
