@@ -1,3 +1,5 @@
+https://github.com/mkyong/maven-examples
+
 # maven-examples
 List of Maven examples
 
@@ -29,3 +31,6 @@ Upcoming...
 
 # Update this 
 http://www.mkyong.com/maven/how-to-run-unit-test-with-maven/
+https://www.mkyong.com/java/java-properties-file-examples/
+
+
