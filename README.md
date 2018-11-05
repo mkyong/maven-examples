@@ -16,10 +16,14 @@ http://www.mkyong.com/maven/maven-how-to-create-a-multi-module-project/
 ## 4. Maven Profiles
 http://www.mkyong.com/maven/maven-profiles-example/
 
+## 5. Maven Unit Test
+http://www.mkyong.com/maven/how-to-run-unit-test-with-maven/
+
 Upcoming...
 - How to install Maven on Windows
 - How to install Maven on Mac OSX
 - How to install Maven on Ubuntu, Manjora?
+
 
 ## 4. Maven FAQs
 - http://www.mkyong.com/maven/where-is-maven-local-repository/
@@ -31,7 +35,7 @@ Upcoming...
 - https://books.sonatype.com/mvnex-book/reference/index.html
 
 # Update this 
-http://www.mkyong.com/maven/how-to-run-unit-test-with-maven/
+http://www.mkyong.com/maven/how-to-skip-maven-unit-test/
 https://www.mkyong.com/java/java-properties-file-examples/
 
 
