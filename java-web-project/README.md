@@ -1,7 +1,7 @@
 # Maven - How to create a Java web application project
 Maven 3, Spring 5 MVC, JUnit 5, Logback and Jetty web server. A simple web project to display a current date.
 
-Project Link - http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
+Project Link - https://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/
 
 
 ## 1. How to run this project?

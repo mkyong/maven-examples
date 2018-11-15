@@ -1,7 +1,7 @@
 # Maven – How to create a Java project
 Maven 3, Apache Commons Codec, a simple Java project to hash a string with the SHA-256 algorithm.
 
-Project Link - http://www.mkyong.com/maven/how-to-create-a-java-project-with-maven/
+Project Link - https://www.mkyong.com/maven/how-to-create-a-java-project-with-maven/
 
 
 ## How to run this project?

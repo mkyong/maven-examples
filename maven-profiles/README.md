@@ -1,7 +1,7 @@
 # Maven Profiles example
 Maven profile examples to pass different parameters for different environment (development, test or production).
 
-Project Link - http://www.mkyong.com/maven/maven-profiles-example/
+Project Link - https://www.mkyong.com/maven/maven-profiles-example/
 
 ## How to run this project?
 ```
