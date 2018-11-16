@@ -27,15 +27,15 @@ https://www.mkyong.com/maven/how-to-run-unit-test-with-maven/
 ### Maven - How to skip unit test
 https://www.mkyong.com/maven/how-to-skip-maven-unit-test/
 
-Upcoming...
-
 ## 6. Code Coverage
 
-### Maven Jacoco example
+### Maven Jacoco example (line coverage)
 https://www.mkyong.com/maven/maven-jacoco-code-coverage-example/
 
+### Maven - PITest example (mutation coverage)
+http://www.mkyong.com/maven/maven-pitest-mutation-testing-example/
 
-https://en.wikipedia.org/wiki/Java_code_coverage_tools
+Upcoming...
 
 ## 7. Static Code Analysis
 
@@ -58,7 +58,6 @@ https://www.mkyong.com/java/java-properties-file-examples/
 
 # Create this 
 How to install Maven on Manjaro.
-
 
 UPDATE this JAVA_HOME
 http://www.mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/
