@@ -5,9 +5,9 @@ List of Maven examples
 
 ## Maven Installation
 How to install Maven on Windows, Ubuntu and Mac OSX
-https://www.mkyong.com/maven/how-to-install-maven-in-windows/
-https://www.mkyong.com/maven/how-to-install-maven-in-ubuntu/
-https://www.mkyong.com/maven/install-maven-on-mac-osx/
+* https://www.mkyong.com/maven/how-to-install-maven-in-windows/
+* https://www.mkyong.com/maven/how-to-install-maven-in-ubuntu/
+* https://www.mkyong.com/maven/install-maven-on-mac-osx/
 
 ## 1. Maven - A Java project
 https://www.mkyong.com/maven/how-to-create-a-java-project-with-maven/
@@ -29,37 +29,26 @@ https://www.mkyong.com/maven/how-to-skip-maven-unit-test/
 
 ## 6. Code Coverage
 
-### Maven Jacoco example (line coverage)
+### Maven - Jacoco example (line coverage)
 https://www.mkyong.com/maven/maven-jacoco-code-coverage-example/
 
 ### Maven - PITest example (mutation coverage)
 http://www.mkyong.com/maven/maven-pitest-mutation-testing-example/
 
-Upcoming...
-
 ## 7. Static Code Analysis
 
-(find bugs & PMD)
-https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis
-https://pmd.github.io/
+Maven - SpotBugs example
+http://www.mkyong.com/maven/maven-spotbugs-example/
 
+Maven - PMD example
+http://www.mkyong.com/maven/maven-pmd-example/
+
+https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis
 
 ## 8. FAQs
 - http://www.mkyong.com/maven/where-is-maven-local-repository/
-
 
 # References
 - https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
 - https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html
 - https://books.sonatype.com/mvnex-book/reference/index.html
-
-# Update this 
-https://www.mkyong.com/java/java-properties-file-examples/
-
-# Create this 
-How to install Maven on Manjaro.
-
-UPDATE this JAVA_HOME
-http://www.mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/
-
-
