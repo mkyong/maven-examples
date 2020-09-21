@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <artifactId>maven-profiles</artifactId>
+        <groupId>com.mkyong</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>example1</artifactId>
+
+    <profiles>
+
+        <profile>
+            <id>dev</id>
+            <activation>
+                <!-- this profile is active by default -->
+                <activeByDefault>true</activeByDefault>
+                <!-- activate if system properties 'env=dev' -->
+                <property>
+                    <name>env</name>
+                    <value>dev</value>
+                </property>
+            </activation>
+            <properties>
+                <db.driverClassName>com.mysql.jdbc.Driver</db.driverClassName>
+                <db.url>jdbc:mysql://localhost:3306/dev</db.url>
+                <db.username>mkyong</db.username>
+                <db.password>8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92</db.password>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>prod</id>
+            <activation>
+                <!-- activate if system properties 'env=prod' -->
+                <property>
+                    <name>env</name>
+                    <value>prod</value>
+                </property>
+            </activation>
+            <properties>
+                <db.driverClassName>com.mysql.jdbc.Driver</db.driverClassName>
+                <db.url>jdbc:mysql://live01:3306/prod</db.url>
+                <db.username>mkyong</db.username>
+                <db.password>8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92</db.password>
+            </properties>
+        </profile>
+
+    </profiles>
+
+    <build>
+
+        <!-- map ${} variable -->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>com.mkyong.example1.App1</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--
+           <plugin>
+               <groupId>org.codehaus.mojo</groupId>
+               <artifactId>exec-maven-plugin</artifactId>
+               <version>1.6.0</version>
+               <executions>
+                   <execution>
+                       <goals>
+                           <goal>java</goal>
+                       </goals>
+                   </execution>
+               </executions>
+               <configuration>
+                   <mainClass>com.mkyong.password.App1</mainClass>
+                   <arguments>
+                       <argument>123456</argument>
+                   </arguments>
+                   <systemProperties>
+                       <systemProperty>
+                           <key>db.driverClassName</key>
+                           <value>${db.driverClassName}</value>
+                       </systemProperty>
+                       <systemProperty>
+                           <key>db.url</key>
+                           <value>${db.url}</value>
+                       </systemProperty>
+                       <systemProperty>
+                           <key>db.user</key>
+                           <value>${db.user}</value>
+                       </systemProperty>
+                       <systemProperty>
+                           <key>db.password</key>
+                           <value>${db.password}</value>
+                       </systemProperty>
+                   </systemProperties>
+               </configuration>
+           </plugin>
+           -->
+
+        </plugins>
+    </build>
+
+
+</project>
