@@ -25,7 +25,7 @@ pipeline {
         }
         stage ("Find and Copy config file") {
             steps {
-                sh  'git config --global user.email "ci-admin@jenkins.com" && git config --global git config user.name "CI Admin" && git clone https://github.com/ziyanakthar/maven-examples.git && cd maven-unit-test && mvn test'
+                sh  'git clone https://github.com/ziyanakthar/maven-examples.git && cd maven-unit-test && mvn test && mvn install'
             }
                                
       
