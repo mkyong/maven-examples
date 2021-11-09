@@ -25,11 +25,9 @@ pipeline {
         }
         stage ("Find and Copy config file") {
             steps {
-                withCredentials(usernamePassword(){
-              // Get some code from a GitHub repository
-              sh("""
-              git config --global user.email "ci-admin@jenkins.com" && git config --global git config user.name "CI Admin" && git clone https://github.com/ziyanakthar/maven-examples.git && cd maven-unit-test && mvn test""")
-            }        
+                sh  'git config --global user.email "ci-admin@jenkins.com" && git config --global git config user.name "CI Admin" && git clone https://github.com/ziyanakthar/maven-examples.git && cd maven-unit-test && mvn test'
+            }
+                               
       
             post {
                  failure {
