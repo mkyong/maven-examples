@@ -1,0 +1,47 @@
+pipeline {
+    agent { label "master" }
+
+    triggers {
+        cron('* * * * 1-5')
+    }
+        
+    options {
+        skipDefaultCheckout true // Allows us to clean house before actual git pull
+    }
+
+    environment { // A good place to put high visibility/commit-changing variables
+        SLACK_MESSAGE_CHANNEL = "slack-testing"
+        SLACK_SUCCESS_COLOR = "#00FF00" // Green
+        SLACK_UNSTABLE_COLOR = "#FFFF00" // Yellow
+        SLACK_FAIL_COLOR = "#FF0000" // Red
+        CONFIG_FILE_NAME = "config.xml"
+    }
+
+    stages {
+        stage ("Initialization") {
+            steps {
+                cleanWs() // Clean house
+            }
+        }
+        stage ("Find and Copy config file") {
+            steps {
+                sh 'pwd && ls -ltr && git config --global user.email "ci-admin@jenkins.com" && git config user.name "CI Admin"'
+            }        
+      
+            post {
+                 failure {
+                    slackSend (color: '#FF0000', message: """FAILED:
+Job: ${env.JOB_NAME}
+Build #${env.BUILD_NUMBER}
+Build: ${env.BUILD_URL}'""")
+    }
+                 success {
+                    slackSend (color: '#00FF00', message: """SUCCESS:
+Job: ${env.JOB_NAME}
+Build #${env.BUILD_NUMBER}
+Build: ${env.BUILD_URL}'""")
+                 }
+            }
+        }
+    }
+}
