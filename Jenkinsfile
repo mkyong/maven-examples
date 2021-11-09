@@ -25,7 +25,7 @@ pipeline {
         }
         stage ("Find and Copy config file") {
             steps {
-                sh  'git clone https://github.com/ziyanakthar/maven-examples.git && pwd & ls -ltr maven-examples/ && cd maven-examples/maven-unit-test && mvn test && mvn install'
+                sh  'git clone https://github.com/ziyanakthar/maven-examples.git && pwd && cd maven-examples && ls -ltr && mvn test && mvn install'
             }
                                
       
