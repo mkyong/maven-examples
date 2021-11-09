@@ -1,9 +1,7 @@
 pipeline {
     agent { label "master" }
 
-    triggers {
-        cron('* * * * 1-5')
-    }
+    triggers { pollSCM 'H/5 * * * *' }
         
     options {
         skipDefaultCheckout true // Allows us to clean house before actual git pull
@@ -23,7 +21,7 @@ pipeline {
                 cleanWs() // Clean house
             }
         }
-        stage ("Find and Copy config file") {
+        stage ("Maven Tests") {
             steps {
                 sh  'git clone https://github.com/ziyanakthar/maven-examples.git && pwd && cd maven-examples/maven-unit-test && ls -ltr && mvn test && mvn install'
             }
