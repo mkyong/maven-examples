@@ -1,7 +1,7 @@
 pipeline {
     agent { label "master" }
 
-    triggers { pollSCM 'H/5 * * * *' }
+    triggers { pollSCM '* * * * *' }
         
     options {
         skipDefaultCheckout true // Allows us to clean house before actual git pull
