@@ -8,7 +8,7 @@
     <artifactId>maven-profiles</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
-
+<!-- sub modules -->>
     <!-- sub modules -->>
     <modules>
         <module>example1</module>
