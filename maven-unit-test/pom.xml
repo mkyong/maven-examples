@@ -19,6 +19,7 @@
     <dependencies>
 
         <!-- junit 5, unit test -->
+             <!-- junit 6, unit test -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
