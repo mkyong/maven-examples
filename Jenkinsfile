@@ -24,7 +24,7 @@ def notifyBuild(String buildStatus = 'STARTED', String channel = '#jenkins-ci-in
  
   def commit = sh(returnStdout: true, script: 'git rev-parse HEAD')
   def author = sh(returnStdout: true, script: "git --no-pager show -s --format='%an'").trim()
-  def branch1 = sh(returnStdout: true, script: 'git name-rev --name-only HEAD').trim()
+  def branch1 = sh(returnStdout: true, script: 'git name-rev --name-only HEAD').tokenize('/')
   def message = sh(returnStdout: true, script: 'git log -1 --pretty=%B').trim()
 
   // Override default values based on build status
@@ -76,7 +76,7 @@ def notifyBuild(String buildStatus = 'STARTED', String channel = '#jenkins-ci-in
   // JSONObject for branch
   JSONObject branch = new JSONObject();
   branch.put('title', 'Branch');
-  branch.put('value', branch1.toString());
+  branch.put('value', branch1[2]);
   branch.put('short', true);
   // JSONObject for author
   JSONObject commitAuthor = new JSONObject();
@@ -98,22 +98,22 @@ def notifyBuild(String buildStatus = 'STARTED', String channel = '#jenkins-ci-in
   attachments.add(attachment);
   println attachments.toString()
   println branch.toString()
-  println getGitBranchName()
+  println branch1[2]
+  //println getGitBranchName()
 
   // Send notifications
   slackSend (color: colorCode, message: subject, attachments: attachments.toString(), channel: channel)
     }
 
-def getGitBranchName() {
-    return scm.branches[0].name
-}    
+//def getGitBranchName() {
+//    return scm.branches[0].name
+//}    
     
 node('master'){
-    stage ('Checkout') {
-        checkout([$class: 'GitSCM', branches: [[name: '*/develop']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ziyanakthar/maven-examples.git']]])
+   stage ('Checkout') {
+        checkout([$class: 'GitSCM', extensions: [], userRemoteConfigs: [[url: 'https://github.com/ziyanakthar/maven-examples.git']]])
     }
-
-
+    
     stage ('Build') {
         try {
           //  notifyBuild()
