@@ -111,7 +111,7 @@ def notifyBuild(String buildStatus = 'STARTED', String channel = '#jenkins-ci-in
     
 node('master'){
    stage ('Checkout') {
-        checkout([$class: 'GitSCM', branches: [[name: '*/develop']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ziyanakthar/maven-examples.git']]])
+        checkout([$class: 'GitSCM', branches: [[name: '*/develop'], [name: '*/master'], [name: 'release']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ziyanakthar/maven-examples.git']]])
     }
     
     stage ('Build') {
